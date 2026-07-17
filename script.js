@@ -91,7 +91,7 @@ let nextgame = () => {
    
     });
     
-    
+    winner.innerText = ""
     }
 
 }
