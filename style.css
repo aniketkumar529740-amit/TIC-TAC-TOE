@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #1a1a2e;
+    font-family:'Tahoma, Geneva, Verdana, sans-serif';
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 10rem;
+}
+ 
+header{
+  min-width: 40vmin;
+}
+
+header .head{
+  margin-top: 4vh;
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+ 
+ .head-1{
+  color: aqua;
+}
+
+.head-2{
+  color: rgb(255, 255, 255);
+  margin: 0 20px;
+}
+
+.head-3{
+  color: rgb(243, 7, 93);
+}
+
+header p{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#main-box{
+    min-height: 40vh;
+    min-width: 40vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1vmin;
+    column-gap: 1vmin;
+    padding: 2vmin;
+    border: 1px solid #cfe4cf;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-box .box{
+  min-height: 100%;
+  min-width: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 10vmin;
+  background-color: #16213e;
+}
+
+#main-box .box:hover{
+  transform: scale(1.2);
+  border: 1px solid white;
+}
+
+#buttons{
+  min-width: 40vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+
+}
+
+.resetbtn{
+  height: 2.8rem;
+  font-size: 1rem;
+  min-width: 11rem;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color:rgba(0, 0, 0, 0.484);
+  color: white;
+  
+}
+
+.new-game-btn{
+
+  height: 2.8rem;
+  font-size: 1rem;
+  min-width: 11rem;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color:rgba(255, 141, 249, 0.99);
+  color: rgb(0, 0, 0);
+}
+
+.hidden-msg{
+  display: none;
+}
+
+.hidden-msg.msg{
+  margin-top: 2%;
+  height: auto;
+  min-width: 40vmin;
+  border: 1px solid rgb(58, 58, 209);
+  border-radius: 16px;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #31dcd9;
+}
+
+
+
