@@ -3,6 +3,9 @@ let mainbox = document.querySelector("#main-box");
 let resetbtn = document.querySelector(".resetbtn")
 let winner = document.querySelector(".hidden-msg")
 let newgame = document.querySelector(".new-game-btn")
+let clickeffect = new Audio("click.mp3");
+let wineffect = new Audio("win.mp3")
+
 
 trunx = true;
 
@@ -20,6 +23,8 @@ const winpatterns =  [
 let start = () => {
     box.forEach(boxes => {
         boxes.addEventListener("click", () => {
+            clickeffect.currentTime = 0;
+            clickeffect.play()
             if(trunx == true) {
             boxes.innerText = "X"
             boxes.style.backgroundColor = "#00d2fc"
@@ -65,9 +70,11 @@ let checkwinner = () => {
 
           if(p0 != "" && p0 === p1 && p1 === p2){
             if(p0 === p1 && p1 === p2){
+            wineffect.currentTime = 0;
+            wineffect.play()
             winner.classList.add("msg")
             winner.innerText = `🏆 Player ${p0} Wins!`
-        var winman = console.log("winner",p0) 
+           console.log("winner",p0) 
            box.forEach(boxes => boxes.disabled = true);
              return p0;
            
@@ -98,5 +105,6 @@ let nextgame = () => {
 
 
 
-resetbtn.addEventListener("click",clearbtn)
+resetbtn.addEventListener("click", clearbtn)
+
 newgame.addEventListener("click",nextgame)
